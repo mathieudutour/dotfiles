@@ -28,6 +28,10 @@ do
   source $file
 done
 
+# use the pure-prompt shell (https://github.com/sindresorhus/pure)
+autoload -U promptinit; promptinit
+prompt pure
+
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
