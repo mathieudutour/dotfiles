@@ -1,4 +1,10 @@
-# holman does dotfiles
+<div align="center">
+  <img src="https://media.giphy.com/media/VjT6Xa56ib1Qs/giphy.gif" />
+</div>
+
+```sh
+git clone https://github.com/mathieudutour/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && script/bootstrap
+```
 
 Your dotfiles are how you personalize your system. These are mine.
 
@@ -51,7 +57,9 @@ There's a few special files in the hierarchy.
 Run this:
 
 ```sh
-git clone https://github.com/mathieudutour/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && script/bootstrap
+git clone https://github.com/mathieudutour/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+script/bootstrap
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
