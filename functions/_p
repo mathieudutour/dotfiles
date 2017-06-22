@@ -1,5 +1,5 @@
-#compdef c
+#compdef p
 _files -W $PROJECTS -/
 _files -W $GOPATH/src/github.com -/
 
-# See further documentation in `functions/c`.
+# See further documentation in `functions/p`.
