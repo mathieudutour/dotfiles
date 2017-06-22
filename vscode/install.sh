@@ -11,3 +11,7 @@
 set -e
 
 for extension in $(cat ./extensions.txt); do code --install-extension $extension; done
+
+# symlink this folder to Code's preferences
+rm -rf ~/Library/Application\ Support/Code/User
+ln -s ~/.dotfiles/vscode ~/Library/Application\ Support/Code/User
