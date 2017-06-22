@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://media.giphy.com/media/VjT6Xa56ib1Qs/giphy.gif" />
+  <img src="http://www.gifbin.com/bin/032010/1268394014_iron_man_briefcase_suit.gif" />
 </div>
 
 ```sh
