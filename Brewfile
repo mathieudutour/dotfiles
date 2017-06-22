@@ -21,6 +21,7 @@ brew 'zsh'
 
 cask '1password'
 cask 'appcleaner'
+cask 'battle-net'
 cask 'dropbox'
 cask 'imagealpha'
 cask 'imageoptim'
