@@ -9,6 +9,10 @@
 #                     |__/
 #
 
+# fzf Auto-completion
+# ---------------
+[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+
 EMOJI_CLI_DICT="${0:A:h}/dict/emoji.json"
 : "${EMOJI_CLI_FILTER:="fzf-tmux -d 15%:fzf:peco:percol"}"
 : "${EMOJI_CLI_KEYBIND:="^s"}"
