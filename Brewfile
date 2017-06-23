@@ -18,6 +18,7 @@ brew 'unrar'
 brew 'wget'
 brew 'yarn'
 brew 'zsh'
+brew 'zsh-syntax-highlighting'
 
 cask '1password'
 cask 'appcleaner'
