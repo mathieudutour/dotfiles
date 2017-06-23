@@ -38,3 +38,8 @@ cask 'torbrowser'
 cask 'transmission'
 cask 'visual-studio-code'
 cask 'vlc'
+
+cask 'qlcolorcode'
+cask 'qlstephen'
+cask 'qlmarkdown'
+cask 'quicklook-json'
