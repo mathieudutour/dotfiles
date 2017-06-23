@@ -5,15 +5,12 @@
         protocol = https
 [alias]
         co = checkout
-
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+        ui = always
 [core]
         excludesfile = ~/.gitignore
         editor = vim
+        pager = diff-so-fancy | less --tabs=2 -RFX
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -23,8 +20,25 @@
 [help]
         autocorrect = 1
 [push]
-        # See `git help config` (search for push.default)
-        # for more information on different options of the below setting.
-        #
-        # Setting to git 2.0 default to suppress warning message
-        default = simple
+        # push easily. http://stackoverflow.com/a/23918418/89484
+        default = current
+[color "diff"]
+        meta = yellow bold
+        commit = green bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+        whitespace = red reverse
+[color "diff-highlight"]
+        oldNormal = red bold
+        oldHighlight = "red bold 52"
+        newNormal = "green bold"
+        newHighlight = "green bold 22"
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+[color "status"]
+        added = yellow
+        changed = green
+        untracked = cyan
