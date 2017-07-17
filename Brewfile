@@ -19,6 +19,7 @@ brew 'spark'
 brew 'unrar'
 brew 'wget'
 brew 'yarn'
+brew 'watchman'
 brew 'zsh'
 brew 'zsh-syntax-highlighting'
 
