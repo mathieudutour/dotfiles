@@ -6,7 +6,7 @@
 [alias]
         co = checkout
 [color]
-        ui = always
+        ui = auto
 [core]
         excludesfile = ~/.gitignore
         editor = vim
@@ -44,3 +44,8 @@
         untracked = cyan
 [status]
 	showUntrackedFiles = all
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
