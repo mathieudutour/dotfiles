@@ -6,7 +6,9 @@
   "editor.fontLigatures": false,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "editor.detectIndentation": false,
   "editor.wrappingIndent": "indent",
   "editor.dragAndDrop": false,
@@ -61,5 +63,8 @@
   "extensions.ignoreRecommendations": false,
   "window.zoomLevel": 0,
   "search.useIgnoreFilesByDefault": true,
-  "workbench.fontAliasing": "antialiased"
+  "workbench.fontAliasing": "antialiased",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true
 }
