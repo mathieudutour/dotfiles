@@ -62,7 +62,7 @@
   "workbench.startupEditor": "newUntitledFile",
   "extensions.ignoreRecommendations": false,
   "window.zoomLevel": 0,
-  "search.useIgnoreFilesByDefault": true,
+  "search.useIgnoreFiles": true,
   "workbench.fontAliasing": "antialiased",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
