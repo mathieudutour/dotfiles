@@ -5,7 +5,3 @@
 
 echo "› sudo softwareupdate -i -a"
 sudo softwareupdate -i -a
-
-# set up the path for Xcode
-mkdir ~/.MacOSX
-defaults write $HOME/.MacOSX/environment PATH $PATH
