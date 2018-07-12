@@ -24,7 +24,6 @@
     "**/node_modules": true,
     "**/.idea": true,
     "**/.vscode": true,
-    "**/yarn.lock": true,
     "**/tmp": true
   },
   "files.watcherExclude": {
@@ -66,5 +65,10 @@
   "workbench.fontAliasing": "antialiased",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "beautify.ignore": [
+    "**/*"
+  ]
 }
