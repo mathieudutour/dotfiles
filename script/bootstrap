@@ -154,5 +154,7 @@ else
   fail "error installing dependencies"
 fi
 
+mkdir ~/Projects || true
+
 echo ''
 echo '  All installed!'
