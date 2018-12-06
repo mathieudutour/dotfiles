@@ -16,7 +16,14 @@ then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
   then
+    if test ! $(which ruby)
+    then
+	    echo "    But first we need ruby."
+	    sudo apt-get install ruby-full
+    fi
+
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+    sudo apt-get install build-essential
   fi
 
 fi
