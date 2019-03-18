@@ -49,7 +49,7 @@
   "workbench.colorTheme": "One Monokai",
   "vsicons.projectDetection.disableDetect": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "git.confirmSync": false,
   "editor.scrollBeyondLastLine": false,
   "flow.enabled": false,
@@ -70,5 +70,16 @@
   "telemetry.enableCrashReporter": false,
   "beautify.ignore": [
     "**/*"
-  ]
+  ],
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.accessibilitySupport": "off",
+  "workbench.statusBar.feedback.visible": false,
+  "workbench.tips.enabled": false,
+  "breadcrumbs.enabled": true,
+  "workbench.enableExperiments": false,
+  "keyboard.touchbar.enabled": false,
+  "editor.cursorSmoothCaretAnimation": true,
+  "files.associations": {
+    "*.component": "json"
+  }
 }

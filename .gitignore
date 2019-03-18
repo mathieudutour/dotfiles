@@ -1,3 +1,4 @@
 git/gitconfig.local.symlink
 
 vscode/workspaceStorage
+vscode/globalStorage
