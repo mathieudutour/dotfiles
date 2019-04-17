@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://j.gifs.com/wVKr5w.gif" />
+  <img src="https://user-images.githubusercontent.com/3254314/56286658-45b9e280-60e8-11e9-9a4b-6df87b3d923c.gif" />
 </div>
 
 ```sh
