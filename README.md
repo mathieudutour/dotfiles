@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="http://www.gifbin.com/bin/032010/1268394014_iron_man_briefcase_suit.gif" />
+  <img src="https://j.gifs.com/wVKr5w.gif" />
 </div>
 
 ```sh
@@ -76,11 +76,11 @@ this script in `bin/`.
 
 I want this to work for everyone; that means when you clone it down it should
 work for you even though you may not have `rbenv` installed, for example. That
-said, I do use this as *my* dotfiles, so there's a good chance I may break
+said, I do use this as _my_ dotfiles, so there's a good chance I may break
 something if I forget to make a check for a dependency.
 
 If you're brand-new to the project and run into any blockers, please
-[open an issue](https://github.com/holman/dotfiles/issues) on this repository
+[open an issue](https://github.com/mathieudutour/dotfiles/issues) on this repository
 and I'd love to get it fixed for you!
 
 ## thanks

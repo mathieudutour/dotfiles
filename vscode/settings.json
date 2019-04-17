@@ -81,5 +81,7 @@
   "editor.cursorSmoothCaretAnimation": true,
   "files.associations": {
     "*.component": "json"
-  }
+  },
+  "git.enableSmartCommit": true,
+  "editor.formatOnSave": true
 }
