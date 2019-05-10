@@ -14,7 +14,6 @@ brew 'imagemagick', args: ['with-webp']
 brew 'jq'
 brew 'openssl'
 brew 'node'
-brew 'nvm'
 brew 'opam'
 brew 'peco'
 brew 'readline'
