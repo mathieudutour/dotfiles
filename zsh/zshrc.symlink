@@ -1,3 +1,6 @@
+# uncomment to debug the zsh startup
+# zmodload zsh/zprof
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
@@ -34,8 +37,25 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # initialize autocomplete here, otherwise functions won't be loaded
+
+# Execute code in the background to not affect the current session
+{
+    # Compile zcompdump, if modified, to increase startup speed.
+    zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
+    if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
+        zcompile "$zcompdump"
+    fi
+} &!
+
+skip_global_compinit=1
+
 autoload -U compinit
-compinit
+# only check compinit cache once per day
+if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
@@ -58,3 +78,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# uncomment to debug the zsh startup
+# zprof
