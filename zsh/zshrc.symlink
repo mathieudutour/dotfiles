@@ -32,7 +32,6 @@ do
 done
 
 # use the pure-prompt shell (https://github.com/sindresorhus/pure)
-fpath+=('/home/mathieudutour/.nvm/versions/node/v11.3.0/lib/node_modules/pure-prompt/functions')
 autoload -U promptinit; promptinit
 prompt pure
 
