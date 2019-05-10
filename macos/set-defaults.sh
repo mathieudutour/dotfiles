@@ -18,14 +18,14 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Set dark mode
-default write NSGlobalDomain AppleInterfaceStyle Dark
+defaults write NSGlobalDomain AppleInterfaceStyle Dark
 
 # Use non-retard units
-default write NSGlobalDomain AppleMetricUnits 1
-default write NSGlobalDomain AppleTemperatureUnit Celsius
+defaults write NSGlobalDomain AppleMetricUnits 1
+defaults write NSGlobalDomain AppleTemperatureUnit Celsius
 
 # Always open in a tab
-default write NSGlobalDomain AppleWindowTabbingMode always
+defaults write NSGlobalDomain AppleWindowTabbingMode always
 
 # Disable press-and-hold for keys in favor of key repeat.
 # defaults write -g ApplePressAndHoldEnabled -bool false
