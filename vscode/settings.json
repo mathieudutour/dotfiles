@@ -74,7 +74,9 @@
   "keyboard.touchbar.enabled": false,
   "editor.cursorSmoothCaretAnimation": true,
   "files.associations": {
-    "*.component": "json"
+    "*.component": "json",
+    "*.zsh": "shellscript",
+    "*.symlink": "shellscript"
   },
   "git.enableSmartCommit": true,
   "editor.formatOnSave": true,
