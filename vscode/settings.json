@@ -6,9 +6,7 @@
   "editor.fontLigatures": false,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "editor.detectIndentation": false,
   "editor.wrappingIndent": "indent",
   "editor.dragAndDrop": false,
@@ -47,8 +45,6 @@
   "javascript.validate.enable": false,
   "extensions.autoUpdate": true,
   "workbench.colorTheme": "One Monokai",
-  "vsicons.projectDetection.disableDetect": true,
-  "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "material-icon-theme",
   "git.confirmSync": false,
   "editor.scrollBeyondLastLine": false,
@@ -68,9 +64,7 @@
   "git.autofetch": true,
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
-  "beautify.ignore": [
-    "**/*"
-  ],
+  "beautify.ignore": ["**/*"],
   "editor.acceptSuggestionOnEnter": "off",
   "editor.accessibilitySupport": "off",
   "workbench.statusBar.feedback.visible": false,
@@ -83,5 +77,16 @@
     "*.component": "json"
   },
   "git.enableSmartCommit": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "sml.ignoreMissingSmlDotJson": true,
+  "emojisense.unicodeCompletionsEnabled": false,
+  "emojisense.languages": {
+    "markdown": true,
+    "plaintext": {
+      "markupCompletionsEnabled": false,
+      "emojiDecoratorsEnabled": false
+    },
+    "git-commit": true,
+    "mdx": true
+  }
 }
