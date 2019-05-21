@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# Usage: changeMac
+# Description: change the mac address. Unlimited WiFi FTW!
+# Note: MacOS / *BSD.
+#
+# credit: https://twitter.com/nicosommi/status/1130500577128062976
+
+changeMac() {
+  local net=${1:-en0}
+  local mac=$(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//')
+  sudo ifconfig $net ether $mac
+  sudo ifconfig $net down
+  sudo ifconfig $net up
+  echo "Your new physical address for interface $net is $mac"
+}
