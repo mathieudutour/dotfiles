@@ -8,4 +8,4 @@
 #
 #   $ move-to-gif path/to/input.mov output.gif
 
-ffmpeg -i "$1" -y -vf fps=10,scale=900:-1:flags=lanczos,palettegen .temp_palette.png && ffmpeg -i "$1" -i .temp_palette.png -r 10 -filter_complex "fps=10,scale=900:-1:flags=lanczos[x];[x][1:v]paletteuse" -f gif - | gifsicle --optimize=3 --delay=5 > "$2" && rm .temp_palette.png
+ffmpeg -i "$1" -y -vf fps=24,scale=900:-1:flags=lanczos,palettegen .temp_palette.png && ffmpeg -i "$1" -i .temp_palette.png -r 24 -filter_complex "fps=24,scale=900:-1:flags=lanczos[x];[x][1:v]paletteuse" -f gif - | gifsicle --optimize=3 --delay=5 > "$2" && rm .temp_palette.png
