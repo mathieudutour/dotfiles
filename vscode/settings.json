@@ -16,13 +16,11 @@
   "editor.formatOnPaste": false,
   "editor.renderLineHighlight": "all",
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
     "**/.DS_Store": true,
-    "**/node_modules": true,
+    "**/.git": true,
     "**/.idea": true,
-    "**/.vscode": true,
-    "**/tmp": true
+    "**/.svn": true,
+    "**/node_modules": true
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -76,10 +74,12 @@
   "files.associations": {
     "*.component": "json",
     "*.zsh": "shellscript",
-    "*.symlink": "shellscript"
+    "*.symlink": "shellscript",
+    "Fastfile": "ruby",
+    "Appfile": "ruby",
+    "Matchfile": "ruby"
   },
   "git.enableSmartCommit": true,
-  "editor.formatOnSave": true,
   "sml.ignoreMissingSmlDotJson": true,
   "emojisense.unicodeCompletionsEnabled": false,
   "emojisense.languages": {
@@ -90,5 +90,16 @@
     },
     "git-commit": true,
     "mdx": true
-  }
+  },
+  "material-icon-theme.activeIconPack": "react",
+  "material-icon-theme.showWelcomeMessage": false,
+  "editor.gotoLocation.multiple": "goto",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "vsicons.dontShowNewVersionMessage": true,
+  "yaml.schemas": {
+    "file:///Users/mathieudutour/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.3/schemas/workflow.schema.json": "/.github/workflows/*.yml",
+    "file:///Users/mathieudutour/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.4/schemas/action.schema.json": "/action.yml"
+  },
+  "editor.formatOnSave": true,
+  "workbench.statusBar.visible": false
 }

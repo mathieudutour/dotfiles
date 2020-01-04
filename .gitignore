@@ -2,3 +2,11 @@ git/gitconfig.local.symlink
 
 vscode/workspaceStorage
 vscode/globalStorage
+
+stream/logs
+stream/profiler_data
+stream/**/*.bak
+stream/**/*.log
+stream/**/service.json
+stream/plugin_config
+stream/global.ini
