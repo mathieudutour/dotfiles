@@ -28,8 +28,8 @@
         "sync": 0,
         "volume": 0.12860023975372314
     },
-    "current_program_scene": "scene: desktop",
-    "current_scene": "scene: desktop",
+    "current_program_scene": "scene: standby",
+    "current_scene": "scene: standby",
     "current_transition": "Fade",
     "groups": [],
     "modules": {
@@ -1331,7 +1331,7 @@
             "id": "coreaudio_input_capture",
             "mixers": 197,
             "monitoring_type": 0,
-            "muted": true,
+            "muted": false,
             "name": "capture: mic",
             "prev_ver": 402653190,
             "private_settings": {},

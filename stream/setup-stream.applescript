@@ -3,9 +3,9 @@
 ------------------------------------
 
 set chromeWindows to [Â
-	{location:"https://streamlabs.com/alert-box/v3/68B6827AAFD4590EA504", bounds:{1104, 0, 1440, 524}},Â
+	{location:"https://www.twitch.tv/popout/mathieudutour/chat?popout=", bounds:{1104, 0, 1440, 524}},Â
 	{location:"https://streamlabs.com/widgets/event-list/v1/68B6827AAFD4590EA504", bounds:{1104, 525, 1440, 900}},Â
-	{location:"https://www.twitch.tv/popout/mathieudutour/chat?popout=", bounds:{0, 852, 1104, 900}}Â
+	{location:"https://streamlabs.com/alert-box/v3/68B6827AAFD4590EA504", bounds:{0, 852, 1104, 900}}Â
 ]
 
 -- open all needed stream windows in chrome
@@ -36,10 +36,14 @@ end tell
 ----------------------
 
 -- tell vs code to create a new window
--- tell application "iTerm2"
--- 	create window with default profile
---   set bounds of front window to {0, 0, 1103, 851}
--- end tell
+do shell script "/usr/local/bin/code -n"
+tell application "System Events"
+	get size of window 1 of process "Electron"
+	tell process "Electron"
+		set position of window 1 to {0, 0}
+		set size of window 1 to {1103, 851}
+	end tell
+end tell
 
 --------------------------------
 -- SOUND OUTPUT SETUP --
