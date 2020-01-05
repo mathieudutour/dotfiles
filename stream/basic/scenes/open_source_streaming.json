@@ -767,7 +767,7 @@
                             "y": 0.77252840995788574
                         },
                         "scale_filter": "disable",
-                        "visible": true
+                        "visible": false
                     },
                     {
                         "align": 5,

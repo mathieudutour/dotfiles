@@ -1,11 +1,21 @@
-------------------------------------
+-----------------------------------------
+-- CHANGE THIS DEPENDING ON YOUR SETUP --
+-----------------------------------------
+
+set screenWidth to 1440
+set screenHeight to 900
+set obsWidthOffset to 735 / 2
+set obsHeightOffset to 97 / 2
+
+--------------------------
 -- CHROME WINDOWS SETUP --
-------------------------------------
+--------------------------
 
 set chromeWindows to [Â
-	{location:"https://www.twitch.tv/popout/mathieudutour/chat?popout=", bounds:{1104, 0, 1440, 524}},Â
-	{location:"https://streamlabs.com/widgets/event-list/v1/68B6827AAFD4590EA504", bounds:{1104, 525, 1440, 900}},Â
-	{location:"https://streamlabs.com/alert-box/v3/68B6827AAFD4590EA504", bounds:{0, 852, 1104, 900}}Â
+	{location:"https://www.twitch.tv/popout/mathieudutour/chat?popout=", bounds:{screenWidth - obsWidthOffset, 0, screenWidth, screenHeight - 375 - 1}},Â
+	{location:"https://streamlabs.com/widgets/event-list/v1/68B6827AAFD4590EA504", bounds:{screenWidth - obsWidthOffset, screenHeight - 375, screenWidth, screenHeight}},Â
+	{location:"https://streamlabs.com/alert-box/v3/68B6827AAFD4590EA504", bounds:{0, screenHeight - obsHeightOffset, screenWidth - obsWidthOffset, screenHeight}},Â
+	{location:"https://github.com", bounds:{0, 0, screenWidth - obsWidthOffset, screenHeight - obsHeightOffset}}Â
 ]
 
 -- open all needed stream windows in chrome
@@ -21,19 +31,19 @@ tell application "Google Chrome"
 	end repeat
 end tell
 
-----------------------
+------------------
 -- ITERM2 SETUP --
-----------------------
+------------------
 
 -- tell iterm2 to create a new window
 tell application "iTerm2"
 	create window with default profile
-  set bounds of front window to {0, 0, 1103, 851}
+  set bounds of front window to {0, 0, screenWidth - obsWidthOffset, screenHeight - obsHeightOffset}
 end tell
 
-----------------------
+------------------
 -- VSCODE SETUP --
-----------------------
+------------------
 
 -- tell vs code to create a new window
 do shell script "/usr/local/bin/code -n"
@@ -41,13 +51,13 @@ tell application "System Events"
 	get size of window 1 of process "Electron"
 	tell process "Electron"
 		set position of window 1 to {0, 0}
-		set size of window 1 to {1103, 851}
+		set size of window 1 to {screenWidth - obsWidthOffset, screenHeight - obsHeightOffset}
 	end tell
 end tell
 
---------------------------------
+------------------------
 -- SOUND OUTPUT SETUP --
---------------------------------
+------------------------
 
 -- switch sound output to custom multi-output device 'OBS Output'
 tell application "System Preferences"
@@ -73,5 +83,5 @@ tell application "Music"
 	on error errStr number errorNumber
 		log errStr
 	end try
-	set position of window 1 to {1152, 1}
+	set position of window 1 to {screenWidth - obsWidthOffset, 1}
 end tell

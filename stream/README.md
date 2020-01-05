@@ -1,5 +1,11 @@
 # Setup Stream
 
+Pretty much everything here is from [@noopkat's article](https://medium.com/@suzhinton/my-twitch-live-coding-setup-b2516672fb21).
+
+## [OBS](https://obsproject.com/)
+
+- Add the Twitch Key in the settings
+
 ## [Streamlabs](https://streamlabs.com/dashboard)
 
 - On the [chatbox](https://streamlabs.com/dashboard#/chatbox),
@@ -77,3 +83,5 @@
 ## Touchbar
 
 See [./stream.bttpreset](./stream.bttpreset) for a BetterTouchBar configuration to add buttons to control the stream.
+
+![touchbar stream control](https://pbs.twimg.com/media/ENgX5xsWwAItEcm?format=png&name=4096x4096)
