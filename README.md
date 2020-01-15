@@ -72,6 +72,10 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
+### Additional goodies
+
+You might want to install [Jetbrains Mono](https://www.jetbrains.com/lp/mono), a great monospace font.
+
 ## bugs
 
 I want this to work for everyone; that means when you clone it down it should
