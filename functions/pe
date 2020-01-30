@@ -1,0 +1,5 @@
+#!/bin/zsh
+# Like p followed by e
+
+p $1
+e .
