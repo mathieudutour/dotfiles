@@ -77,7 +77,8 @@
     "*.symlink": "shellscript",
     "Fastfile": "ruby",
     "Appfile": "ruby",
-    "Matchfile": "ruby"
+    "Matchfile": "ruby",
+    "*.logic": "swift"
   },
   "git.enableSmartCommit": true,
   "sml.ignoreMissingSmlDotJson": true,
@@ -96,15 +97,17 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "vsicons.dontShowNewVersionMessage": true,
   "yaml.schemas": {
-    "file:///Users/mathieudutour/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.4/schemas/workflow.schema.json": "/.github/workflows/*.yml",
-    "file:///Users/mathieudutour/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.4/schemas/action.schema.json": "/action.yml"
+    "file:///Users/mathieudutour/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.7/schemas/workflow.schema.json": "/.github/workflows/*.yml",
+    "file:///Users/mathieudutour/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.7/schemas/action.schema.json": "/action.yml"
   },
-  "editor.formatOnSave": true,
   "workbench.statusBar.visible": true,
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace"
+  "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+  "C_Cpp.updateChannel": "Insiders",
+  "editor.formatOnSave": true,
+  "diffEditor.ignoreTrimWhitespace": false
 }

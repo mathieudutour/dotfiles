@@ -9,8 +9,8 @@
 # ...to autocomplete on all of your projects in the directories specified in
 # `functions/_p`. Typically I'm using it like:
 #
-#    p holm<tab>/bo<tab>
+#    p lo<tab>/co<tab>
 #
-# ...to quickly jump into holman/boom, for example.
+# ...to quickly jump into lona/compiler, for example.
 
 cd "$PROJECTS/$1"

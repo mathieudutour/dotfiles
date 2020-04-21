@@ -11,7 +11,7 @@ _zbnc_no_of_npm_args() {
 }
 
 _zbnc_list_cached_modules() {
-  ls ~/.npm 2>/dev/null
+  ls --color=never ~/.npm | sed 's/\/$//g' 2>/dev/null
 }
 
 _zbnc_recursively_look_for() {
@@ -140,4 +140,29 @@ _zbnc_zsh_better_npm_completion() {
   [[ $custom_completion = false ]] && _zbnc_default_npm_completion
 }
 
+_zbnc_zsh_better_yarn_completion() {
+
+  # Store custom completion status
+  local custom_completion=false
+
+  # Load custom completion commands
+  case "$(_zbnc_npm_command)" in
+    add)
+      _zbnc_npm_install_completion
+      ;;
+    remove)
+      _zbnc_npm_uninstall_completion
+      ;;
+    upgrade)
+      _zbnc_npm_uninstall_completion
+      ;;
+    run)
+      _zbnc_npm_run_completion
+      ;;
+  esac
+
+  [[ "$(_zbnc_npm_command)" = "" ]] && _zbnc_npm_run_completion
+}
+
 compdef _zbnc_zsh_better_npm_completion npm
+compdef _zbnc_zsh_better_yarn_completion yarn
