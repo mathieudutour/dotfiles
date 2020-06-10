@@ -96,10 +96,7 @@
   "material-icon-theme.showWelcomeMessage": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "vsicons.dontShowNewVersionMessage": true,
-  "yaml.schemas": {
-    "file:///Users/mathieudutour/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.7/schemas/workflow.schema.json": "/.github/workflows/*.yml",
-    "file:///Users/mathieudutour/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.7/schemas/action.schema.json": "/action.yml"
-  },
+  "yaml.schemas": {},
   "workbench.statusBar.visible": true,
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
