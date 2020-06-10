@@ -32,6 +32,7 @@ do
 done
 
 # use the pure-prompt shell (https://github.com/sindresorhus/pure)
+export PURE_GIT_UNTRACKED_DIRTY=0
 autoload -U promptinit; promptinit
 prompt pure
 
