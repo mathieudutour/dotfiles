@@ -50,4 +50,4 @@
         smudge = git-lfs smudge -- %f
         process = git-lfs filter-process
 [init]
-        templateDir = ~/.dotfiles/git/init-template
+        defaultBranch = main
