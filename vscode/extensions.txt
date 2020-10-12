@@ -23,7 +23,6 @@ freebroccolo.sml
 ghmcadams.lintlens
 GitHub.vscode-pull-request-github
 HookyQR.beautify
-joelday.docthis
 jpoissonnier.vscode-styled-components
 kumar-harsh.graphql-for-vscode
 lindraupe.aw-watcher-vscode
@@ -34,17 +33,14 @@ mikestead.dotenv
 ms-azuretools.vscode-docker
 ms-python.python
 ms-vscode.cpptools
-ms-vscode.Go
 ms-vscode.vscode-typescript-tslint-plugin
 msjsdiag.debugger-for-chrome
 nepaul.editorconfiggenerator
 oderwat.indent-rainbow
-patrys.vscode-code-outline
 PKief.material-icon-theme
 pnp.polacode
 redhat.vscode-yaml
 samverschueren.final-newline
-shinnn.stylelint
 sidneys1.gitconfig
 silvenon.mdx
 slevesque.shader

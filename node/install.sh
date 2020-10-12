@@ -1,5 +1,3 @@
-curl https://raw.githubusercontent.com/Schniz/fnm/master/.ci/install.sh | bash -s -- --skip-shell
-
 install_npm_packages() {
 	if test ! $(which $2)
   then

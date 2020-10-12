@@ -106,5 +106,16 @@
   "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
   "C_Cpp.updateChannel": "Insiders",
   "editor.formatOnSave": true,
-  "diffEditor.ignoreTrimWhitespace": false
+"diffEditor.ignoreTrimWhitespace": false,
+"gitlens.codeLens.scopes": [
+    "document"
+],
+"gitlens.statusBar.enabled": false,
+"gitlens.hovers.avatars": false,
+"gitlens.hovers.annotations.enabled": false,
+"gitlens.views.repositories.enabled": false,
+"gitlens.views.fileHistory.enabled": false,
+"gitlens.views.lineHistory.enabled": false,
+"gitlens.views.search.enabled": false,
+"gitlens.views.compare.enabled": false
 }

@@ -37,7 +37,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 defaults write com.apple.Finder FXPreferredViewStyle clmv
 
 # Show the ~/Library folder.
-chflags nohidden ~/Library
+chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library 2> /dev/null
 
 # Set a really fast key repeat.
 defaults write NSGlobalDomain KeyRepeat -int 1
@@ -90,12 +90,6 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-# Follow the keyboard focus while zoomed in
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
-
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 
@@ -132,10 +126,7 @@ file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
 defaults write com.apple.dock persistent-apps -array
 
 # Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
+defaults write com.apple.dashboard dashboard-enabled-state -int 1
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
@@ -164,13 +155,11 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 # Disable Java
 defaults write com.apple.Safari WebKitJavaEnabled -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles -bool false
 
 # Block pop-up windows
 defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
-
-# Enable “Do Not Track”
-defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 
 # Update extensions automatically
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
@@ -203,7 +192,7 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
 	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 
-	# Load new settings before rebuilding the index
+# Load new settings before rebuilding the index
 killall mds > /dev/null 2>&1
 # Make sure indexing is enabled for the main volume
 sudo mdutil -i on / > /dev/null

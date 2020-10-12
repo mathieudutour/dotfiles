@@ -8,8 +8,10 @@
 
 set -e
 
-for extension in $(cat ./extensions.txt); do code --install-extension $extension; done
+ROOT="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 # symlink this folder to Code's preferences
 rm -rf ~/Library/Application\ Support/Code/User
-ln -s ~/.dotfiles/vscode ~/Library/Application\ Support/Code/User
+ln -s "$ROOT" ~/Library/Application\ Support/Code/User
+
+for extension in $(cat "$ROOT/extensions.txt"); do code --install-extension $extension; done

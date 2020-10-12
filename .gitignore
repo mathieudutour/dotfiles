@@ -10,3 +10,5 @@ stream/**/*.log
 stream/**/service.json
 stream/plugin_config
 stream/global.ini
+
+Brewfile.lock.json
