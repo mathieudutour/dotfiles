@@ -1,0 +1,57 @@
+#!/usr/bin/env zsh
+#
+# A wrapper around Mac's sandbox-exec that lets you easily run terminals/programs within sandboxes for a slightly safer day-to-day computing experience.
+#
+# Useful if you don't want every npm/cargo/pip transitive dependency to have full access to your filesystem and network.
+#
+# See [this writeup](https://kevinlynagh.com/newsletter/2020_04_how_fast_can_plants_grow/) for a bit more background.
+#
+# USAGE:
+#
+# - `$ sb` opens a shell in an offline sandbox that can only read/write the current directory and its children. See base.sb for the default sandbox profile.
+#
+# - `$ sb online` opens a shell in an online sandbox.
+#
+# - `$ sb online -- ping www.google.com` runs ping www.google.com in an online sandbox and returns.
+#
+# - `$ sb foo bar baz -- command` sources profiles foo.sb, bar.sb, baz.sb from the profile directory and runs command within that sandbox.
+#
+# If an app doesn't work a sanbox, search for "sandbox" in Console.app to see what permissions the app was denied and try granting these permissions via a custom profile.
+#
+# Inspired by https://github.com/lynaghk/sandboxtron
+
+DIR="$( cd "$( dirname $0 )" && pwd )"
+
+export SANDBOX_MODE_NETWORK="offline"
+
+PROFILES=("base")
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        "--")
+            shift
+            break
+            ;;
+
+        "online")
+            SANDBOX_MODE_NETWORK="online"
+            PROFILES+=($1)
+            ;;
+
+        *)
+            PROFILES+=($1)
+            ;;
+    esac
+    shift
+done
+
+# TODO, make this work w/ symlinks
+exec sandbox-exec -f "$DIR/../sandbox-profiles/main.sb"                  \
+    -D home="$HOME"                                         \
+    -D profile-folder="$DIR/../sandbox-profiles"                           \
+    -D working-directory="$(pwd)"                           \
+    -D profile1="$PROFILES[1]"                               \
+    -D profile2="$PROFILES[2]"                               \
+    -D profile3="$PROFILES[3]"                               \
+    -D profile4="$PROFILES[4]"                               \
+    -D profile5="$PROFILES[5]"                               \
+    "${@:-$SHELL}"

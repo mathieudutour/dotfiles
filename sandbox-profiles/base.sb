@@ -1,0 +1,98 @@
+(version 1)
+
+;; Disallow everything by default
+(deny default)
+
+;;
+;; This system profile grants access to a number of things, such as:
+;;
+;;  - locale info
+;;  - system libraries (/System/Library, /usr/lib, etc)
+;;  - access to to basic tools (/etc, /dev/urandom, etc)
+;;  - Apple services (com.apple.system, com.apple.dyld, etc)
+;;
+;; and more, see bsd.sb and system.sb in the corresponding directory.
+;;
+(import "/System/Library/Sandbox/Profiles/bsd.sb")
+
+(define home-path (param "home"))
+
+(define (home-subpath home-relative-subpath)
+  (subpath (string-append home-path home-relative-subpath)))
+
+(allow process-exec)
+(allow process-fork)
+
+(allow file*
+      (home-subpath "/.m2")
+      (home-subpath "/.rustup")
+      (home-subpath "/.cargo")
+      (home-subpath "/.rbenv")
+
+      ;; Yarn
+      (home-subpath "/.yarnrc")
+      (home-subpath "/.yarn")
+      (home-subpath "/.cache/yarn")
+      (home-subpath "/.config/yarn")
+      (home-subpath "/.electron-gyp")
+      (home-subpath "/Library/Caches/node-gyp")
+      (home-subpath "/Library/Caches/electron")
+
+      (regex (string-append "^" (param "home") "/.histfile.*"))
+      (regex "^/dev/tty.*")
+      (subpath "/private/var/run/utmpx")
+      (subpath "/private/etc/ssl/openssl.cnf")
+
+      ;; tempfiles
+      (subpath "/private/var/folders/")
+
+      (subpath "/Applications/Xcode.app/")
+
+      ;; everyone has access to the working directory in which its spawned (passed in via param)
+      (subpath (param "working-directory")))
+
+(allow file-read*
+      ;; zsh needs these for autocomplete
+      (subpath "/bin")
+      (subpath "/sbin")
+      (subpath "/usr/bin")
+      (subpath "/usr/sbin")
+      (subpath "/usr/local")
+
+      ;; macports stuff
+      (subpath "/opt/local")
+
+      ;; used by xcode python http server -- /private/etc/apache2
+      (subpath "/private/etc")
+
+      (subpath "/Library/Java/JavaVirtualMachines")
+      (subpath "/Library/Apple/usr/bin")
+
+      (home-subpath "/.clojure")
+      ;; Cargo
+      (subpath "/Library/Developer/CommandLineTools/")
+      (literal "/Library/Preferences/com.apple.security.plist")
+
+      ;; TODO: how to genericize this for different people?
+      (home-subpath "/.dotfiles/link")
+      (home-subpath "/.dotfiles/shell_sources"))
+
+(allow user-preference-read)
+
+;; required to run Java
+(allow sysctl-write)
+
+(allow network*
+      (local ip "localhost:*")
+      (remote ip "localhost:*"))
+
+(allow mach-lookup
+      ;; needed by command line file watchers like `guard`
+      (global-name "com.apple.FSEvents"))
+
+(allow signal
+      (target children))
+
+;; needed by `swift`
+(allow mach-priv-task-port)
+(allow system-debug)
