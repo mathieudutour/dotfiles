@@ -1,0 +1,4 @@
+pinentry-program /usr/local/bin/pinentry-mac
+
+# Enable gpg to use the gpg-agent
+use-agent

@@ -3,3 +3,7 @@
         email = AUTHOREMAIL
 [credential]
         helper = GIT_CREDENTIAL_HELPER
+[commit]
+	      gpgSign = true
+[tag]
+	      gpgSign = true
