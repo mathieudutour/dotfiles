@@ -10,21 +10,7 @@ if test ! $(which brew)
 then
   echo "  Installing Homebrew for you."
 
-  # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin"
-  then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    if test ! $(which ruby)
-    then
-	    echo "    But first we need ruby."
-	    sudo apt-get install ruby-full
-    fi
-
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    sudo apt-get install build-essential
-  fi
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 fi
 
