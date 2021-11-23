@@ -12,6 +12,7 @@
         excludesfile = ~/.gitignore
         editor = vim
         pager = diff-so-fancy | less --tabs=2 -RFX
+	ignorecase = false
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -52,3 +53,5 @@
         process = git-lfs filter-process
 [init]
         defaultBranch = main
+[pull]
+	rebase = false

@@ -110,5 +110,15 @@
   "spellright.language": ["en"],
   "spellright.documentTypes": ["markdown", "latex", "plaintext"],
   "emmet.showExpandedAbbreviation": "never",
-  "git.enableCommitSigning": true
+  "git.enableCommitSigning": true,
+  "redhat.telemetry.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  },
+  "github.copilot.inlineSuggest.enable": false,
+  "editor.bracketPairColorization.enabled": true
 }
