@@ -13,7 +13,7 @@
   "window.restoreFullscreen": true,
   "files.insertFinalNewline": true,
   "editor.folding": false,
-  "editor.formatOnPaste": true,
+  "editor.formatOnPaste": false,
   "editor.renderLineHighlight": "all",
   "files.exclude": {
     "**/.DS_Store": true,
@@ -106,7 +106,7 @@
   "guides.sendUsagesAndStats": false,
   "typescript.surveys.enabled": false,
   "editor.formatOnSave": true,
-  "editor.formatOnType": true,
+  "editor.formatOnType": false,
   "spellright.language": ["en"],
   "spellright.documentTypes": ["markdown", "latex", "plaintext"],
   "emmet.showExpandedAbbreviation": "never",
@@ -120,5 +120,6 @@
     "markdown": true
   },
   "github.copilot.inlineSuggest.enable": false,
-  "editor.bracketPairColorization.enabled": true
+  "editor.bracketPairColorization.enabled": true,
+  "go.toolsManagement.autoUpdate": true
 }
