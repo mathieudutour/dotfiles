@@ -7,7 +7,7 @@
         # Remove all branches which have been squashed to main
         clean-squashed = "!main=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'); git checkout -q $main && git for-each-ref refs/heads/ \"--format=%(refname:short)\" | while read branch; do mergeBase=$(git merge-base $main $branch) && [[ $(git cherry $main $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == \"-\"* ]] && git branch -D $branch; done"
         # UI to checkout the recent branches
-        cor = !git for-each-ref --sort=-committerdate --format='%(refname:short) (%(committerdate:relative))' refs/heads | fzf --reverse --height 35% --nth 1 | awk '{print $1}' | xargs git checkout
+        cor = !git for-each-ref --sort=-committerdate --format='%(refname:short) (%(committerdate:relative))' refs/heads | fzf --header 'Checkout Recent Branch' --preview 'git diff {1} --color=always' | awk '{print $1}' | xargs git checkout
         # Checkout the fork/branch of a PR
         pr = "!f() { gh pr view $1 --json headRepositoryOwner,headRepository,headRefName,number --jq .headRepositoryOwner.login,.headRepository.name,.headRefName,.number | xargs -n 4 sh -c 'git remote add $3 https://github.com/$0/$1; git fetch $3; git checkout -b pr/$3 --track $3/$2'; }; f"
         # Clean up after having checked out the fork/branch of a PR
