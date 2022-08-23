@@ -2,6 +2,7 @@ git/gitconfig.local.symlink
 
 vscode/workspaceStorage
 vscode/globalStorage
+vscode/History
 
 stream/logs
 stream/profiler_data

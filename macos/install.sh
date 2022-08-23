@@ -19,3 +19,6 @@ fi
 
 echo "› sudo softwareupdate -i -a"
 sudo softwareupdate -i -a
+
+# Set macOS defaults
+$ZSH/macos/set-defaults.sh

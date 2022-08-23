@@ -3,7 +3,7 @@
   "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
   "editor.rulers": [80],
@@ -13,7 +13,7 @@
   "window.restoreFullscreen": true,
   "files.insertFinalNewline": true,
   "editor.folding": false,
-  "editor.formatOnPaste": false,
+  "editor.formatOnPaste": true,
   "editor.renderLineHighlight": "all",
   "files.exclude": {
     "**/.DS_Store": true,
@@ -49,7 +49,7 @@
   "js/ts.implicitProjectConfig.checkJs": false,
   "guides.enabled": false,
   "workbench.startupEditor": "newUntitledFile",
-  "extensions.ignoreRecommendations": false,
+  "extensions.ignoreRecommendations": true,
   "window.zoomLevel": 0,
   "search.useIgnoreFiles": true,
   "workbench.fontAliasing": "antialiased",
@@ -106,7 +106,7 @@
   "guides.sendUsagesAndStats": false,
   "typescript.surveys.enabled": false,
   "editor.formatOnSave": true,
-  "editor.formatOnType": false,
+  "editor.formatOnType": true,
   "spellright.language": ["en"],
   "spellright.documentTypes": ["markdown", "latex", "plaintext"],
   "emmet.showExpandedAbbreviation": "never",
@@ -117,9 +117,19 @@
     "*": false,
     "yaml": false,
     "plaintext": false,
-    "markdown": true
+    "markdown": false
   },
   "github.copilot.inlineSuggest.enable": false,
   "editor.bracketPairColorization.enabled": true,
-  "go.toolsManagement.autoUpdate": true
+  "go.toolsManagement.autoUpdate": true,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "npm.keybindingsChangedWarningShown": true,
+  "grammarly.files.include": [
+    "**/readme.md",
+    "**/README.md",
+    "**/*.txt",
+    "**/*.md"
+  ],
+  "grammarly.config.suggestions.OxfordComma": true,
+  "editor.experimental.stickyScroll.enabled": true
 }
