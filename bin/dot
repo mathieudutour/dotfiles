@@ -40,6 +40,10 @@ done
 
 export ZSH=$HOME/.dotfiles
 
+# Update dotfiles themselves
+echo "› git pull"
+git -C $ZSH pull
+
 # Install homebrew
 $ZSH/homebrew/install.sh 2>&1
 
@@ -48,5 +52,5 @@ echo "› brew update"
 brew update
 
 # Install software
-echo "› $ZSH/script/install"
+echo "› script/install"
 $ZSH/script/install

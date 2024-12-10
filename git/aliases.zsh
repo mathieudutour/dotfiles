@@ -1,10 +1,6 @@
 # Use `hub` as our git wrapper:
-#   http://defunkt.github.com/hub/
-hub_path=$(which hub)
-if (( $+commands[hub] ))
-then
-  alias git=$hub_path
-fi
+#   https://github.com/mislav/hub
+eval "$(hub alias -s)"
 
 # The rest of my fun git aliases
 alias m='git checkout main && git pull origin main'

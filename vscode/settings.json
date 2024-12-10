@@ -50,7 +50,6 @@
   "guides.enabled": false,
   "workbench.startupEditor": "newUntitledFile",
   "extensions.ignoreRecommendations": true,
-  "window.zoomLevel": 0,
   "search.useIgnoreFiles": true,
   "workbench.fontAliasing": "antialiased",
   "explorer.confirmDelete": false,
@@ -65,7 +64,7 @@
   "breadcrumbs.enabled": true,
   "workbench.enableExperiments": false,
   "keyboard.touchbar.enabled": false,
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "files.associations": {
     "*.component": "json",
     "*.zsh": "shellscript",
@@ -114,12 +113,11 @@
   "redhat.telemetry.enabled": false,
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "yaml": false,
     "plaintext": false,
     "markdown": false
   },
-  "github.copilot.inlineSuggest.enable": false,
   "editor.bracketPairColorization.enabled": true,
   "go.toolsManagement.autoUpdate": true,
   "githubPullRequests.createOnPublishBranch": "never",
@@ -131,5 +129,32 @@
     "**/*.md"
   ],
   "grammarly.config.suggestions.OxfordComma": true,
-  "editor.experimental.stickyScroll.enabled": true
+  "githubPullRequests.pullBranch": "never",
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "git.rebaseWhenSync": true,
+  "vscode-home-assistant.ignoreCertificates": true,
+  "vscode-home-assistant.longLivedAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiMzQ4ZDA2NWQwN2U0Y2U4YmNlMzExYTY1ZTg2Nzg0NSIsImlhdCI6MTY3ODI4MjU2OCwiZXhwIjoxOTkzNjQyNTY4fQ.Ju3Yo8FoOPqZUawzFUjm8D9sPuf656CzOT3BWCrEHFA",
+  "vscode-home-assistant.hostUrl": "http://homeassistant.local:8123",
+  "editor.guides.bracketPairs": "active",
+  "gitlens.autolinks": [
+    {
+      "prefix": "RAY-",
+      "url": "https://linear.app/raycast/issue/RAY-<num>"
+    }
+  ],
+  "arduino.useArduinoCli": true,
+  "arduino.logLevel": "verbose",
+  "arduino.disableIntelliSenseAutoGen": true,
+  "arduino.openPDEFiletype": true,
+  "implicitParentheses.enable": false,
+  "githubPullRequests.terminalLinksHandler": "github",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "gitlens.advanced.messages": {
+    "suppressIntegrationRequestTimedOutWarning": true
+  },
+  "security.promptForLocalFileProtocolHandling": false,
+  "application.shellEnvironmentResolutionTimeout": 100,
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }

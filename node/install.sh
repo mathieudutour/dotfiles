@@ -1,3 +1,5 @@
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
 install_npm_packages() {
 	if test ! $(which $2)
   then
@@ -5,5 +7,4 @@ install_npm_packages() {
 	fi
 }
 
-install_npm_packages spoof spoof
 install_npm_packages diff-so-fancy diff-so-fancy

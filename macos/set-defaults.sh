@@ -51,10 +51,10 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 # defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Set up Safari for development.
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+defaults write com.apple.Safari.SandboxBroker ShowDevelopMenu -bool true
+defaults write com.apple.Safari.plist IncludeDevelopMenu -bool true
+defaults write com.apple.Safari.plist WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari.plist "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Menu bar: show remaining battery time (on pre-10.8); hide percentage
